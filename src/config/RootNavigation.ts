@@ -10,7 +10,7 @@ interface NavigationInterface {
 
 export const navigationRef = createNavigationContainerRef<NavigationInterface>();
 
-export function useNavigate(screen: any, params?: any) {
+export function navigate(screen: any, params?: any) {
   if (navigationRef.isReady()) {
     navigationRef.navigate(screen, params);
   }
