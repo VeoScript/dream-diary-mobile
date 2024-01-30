@@ -1,35 +1,23 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {FlashList} from '@shopify/flash-list';
+import {FlatList} from 'react-native';
 
 import tw from '../styles/tailwind';
 
 import MainLayout from '../components/layouts/MainLayout';
+import TimelineCard from '../components/ui/cards/TimelineCard';
+
+import {timeline_data} from '../shared/mocks/timeline';
 
 export default function HomeScreen(): JSX.Element {
   return (
     <MainLayout>
-      <FlashList
-        contentContainerStyle={tw`p-3`}
-        data={data}
-        estimatedItemSize={50}
-        renderItem={({item}) => {
-          return (
-            <View>
-              <Text style={tw`font-poppins text-white`}>{item.name}</Text>
-            </View>
-          );
+      <FlatList
+        contentContainerStyle={tw`p-3 pb-[5rem]`}
+        data={timeline_data}
+        renderItem={({item}): JSX.Element => {
+          return <TimelineCard data={item} />;
         }}
       />
     </MainLayout>
   );
 }
-
-const data = [
-  {
-    name: 'Jerome Villaruel',
-  },
-  {
-    name: 'Richlyn Hermosilla',
-  },
-];

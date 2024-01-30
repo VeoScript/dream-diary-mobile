@@ -783,6 +783,13 @@
     "@babel/helper-plugin-utils" "^7.22.5"
     "@babel/plugin-syntax-numeric-separator" "^7.10.4"
 
+"@babel/plugin-transform-object-assign@^7.16.7":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.23.3.tgz#64177e8cf943460c7f0e1c410277546804f59625"
+  integrity sha512-TPJ6O7gVC2rlQH2hvQGRH273G1xdoloCj9Pc07Q7JbIZYDi+Sv5gaE2fu+r5E7qK4zyt6vj0FbZaZTRU5C3OMA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.22.5"
+
 "@babel/plugin-transform-object-rest-spread@^7.23.4":
   version "7.23.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-rest-spread/-/plugin-transform-object-rest-spread-7.23.4.tgz#2b9c2d26bf62710460bdc0d1730d4f1048361b83"
@@ -1091,7 +1098,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/preset-typescript@^7.13.0":
+"@babel/preset-typescript@^7.13.0", "@babel/preset-typescript@^7.16.7":
   version "7.23.3"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.23.3.tgz#14534b34ed5b6d435aa05f1ae1c5e7adcc01d913"
   integrity sha512-17oIGVlqz6CchO9RFYn5U6ZpWRZIngayYCtrPRSgANSwC2V1Jb+iP74nVxzzXJte8b8BYxrL1yY96xfhTBrNNQ==
@@ -1164,6 +1171,13 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@egjs/hammerjs@^2.0.17":
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/@egjs/hammerjs/-/hammerjs-2.0.17.tgz#5dc02af75a6a06e4c2db0202cae38c9263895124"
+  integrity sha512-XQsZgjm2EcVUiZQf11UBJQfmZeEmOW8DpI1gsFeln6w0ae0ii4dMQEQ0kjl6DspdWX1aGY1/loyXnP0JS06e/A==
+  dependencies:
+    "@types/hammerjs" "^2.0.36"
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -1195,6 +1209,13 @@
   version "8.56.0"
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
+
+"@georstat/react-native-image-cache@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@georstat/react-native-image-cache/-/react-native-image-cache-3.1.0.tgz#80d2cbe2bc5e8d1956fa722c48aa9db8c46ce428"
+  integrity sha512-p84UVar4YUJWnyJ62VwWe82pFuIDs3eqeTLON/ZabDUJY2kE9IBHMbFwMYKgYUW2vN9oDtaRO4NtEW44sb7dTQ==
+  dependencies:
+    crypto-js "^4.1.1"
 
 "@hapi/hoek@^9.0.0", "@hapi/hoek@^9.3.0":
   version "9.3.0"
@@ -2016,6 +2037,11 @@
   integrity sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==
   dependencies:
     "@types/node" "*"
+
+"@types/hammerjs@^2.0.36":
+  version "2.0.45"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.45.tgz#ffa764bb68a66c08db6efb9c816eb7be850577b1"
+  integrity sha512-qkcUlZmX6c4J8q45taBKTL3p+LbITgyx7qhlPYOdOHZB7B31K0mXbP5YA7i7SgDeEGuI9MnumiKPEMrxg8j3KQ==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.6"
@@ -2969,6 +2995,11 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+crypto-js@^4.1.1:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
+  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 css-select@^5.1.0:
   version "5.1.0"
@@ -4000,6 +4031,13 @@ hermes-profile-transformer@^0.0.6:
   integrity sha512-cnN7bQUm65UWOy6cbGcCcZ3rpwW8Q/j4OP5aWRhEry4Z2t2aR1cjrbp0BS+KiBN0smvP1caBgAuxutvyvJILzQ==
   dependencies:
     source-map "^0.7.3"
+
+hoist-non-react-statics@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
 
 html-escaper@^2.0.0:
   version "2.0.2"
@@ -5943,7 +5981,7 @@ react-freeze@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
-react-is@^16.13.0, react-is@^16.13.1:
+react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -5957,6 +5995,37 @@ react-native-config@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.5.1.tgz#73c94f511493e9b7ff9350cdf351d203a1b05acc"
   integrity sha512-g1xNgt1tV95FCX+iWz6YJonxXkQX0GdD3fB8xQtR1GUBEqweB9zMROW77gi2TygmYmUkBI7LU4pES+zcTyK4HA==
+
+react-native-file-access@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-file-access/-/react-native-file-access-3.0.5.tgz#c63af958451e12bf2e3f89ca9aabde9e3fc3cd9b"
+  integrity sha512-r9AFT4islJTZnh/kLTapBBwWzJM/JcVmKelP5rOQY1u5XTCrIL7JkTh6KQNJc8oA6jDqB3DioZ01LSqpiCxeOw==
+
+react-native-gesture-handler@^2.14.1:
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.14.1.tgz#930640231024b7921435ab476aa501dd4a6b2e01"
+  integrity sha512-YiM1BApV4aKeuwsM6O4C2ufwewYEKk6VMXOt0YqEZFMwABBFWhXLySFZYjBSNRU2USGppJbfHP1q1DfFQpKhdA==
+  dependencies:
+    "@egjs/hammerjs" "^2.0.17"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
+
+react-native-reanimated-carousel@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated-carousel/-/react-native-reanimated-carousel-3.5.1.tgz#3605b9959ffc0aa1c6b8b8736d98f91f46e36b17"
+  integrity sha512-9BBQV6JAYSQm2lV7MFtT4mzapXmW4IZO6s38gfiJL84Jg23ivGB1UykcNQauKgtHyhtW2NuZJzItb1s42lM+hA==
+
+react-native-reanimated@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.6.2.tgz#8a48c37251cbd3b665a659444fa9778f5b510356"
+  integrity sha512-IIMREMOrxhtK35drfpzh2UhxNqAOHnuvGgtMofj7yHcMj16tmWZR2zFvMUf6z2MfmXv+aVgFQ6TRZ6yKYf7LNA==
+  dependencies:
+    "@babel/plugin-transform-object-assign" "^7.16.7"
+    "@babel/preset-typescript" "^7.16.7"
+    convert-source-map "^2.0.0"
+    invariant "^2.2.4"
 
 react-native-safe-area-context@^4.8.2:
   version "4.8.2"

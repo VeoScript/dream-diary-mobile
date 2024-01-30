@@ -1117,8 +1117,20 @@ PODS:
     - React-jsi (= 0.73.3)
     - React-logger (= 0.73.3)
     - React-perflogger (= 0.73.3)
+  - ReactNativeFileAccess (3.0.5):
+    - React-Core
+    - ZIPFoundation (= 0.9.11)
   - RNFlashList (1.6.3):
     - React-Core
+  - RNGestureHandler (2.14.1):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
+    - React-Core
+  - RNReanimated (3.6.2):
+    - glog
+    - RCT-Folly (= 2022.05.16.00)
+    - React-Core
+    - ReactCommon/turbomodule/core
   - RNScreens (3.29.0):
     - glog
     - RCT-Folly (= 2022.05.16.00)
@@ -1127,6 +1139,7 @@ PODS:
     - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
+  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -1203,7 +1216,10 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - ReactNativeFileAccess (from `../node_modules/react-native-file-access`)
   - "RNFlashList (from `../node_modules/@shopify/flash-list`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -1223,6 +1239,7 @@ SPEC REPOS:
     - libevent
     - OpenSSL-Universal
     - SocketRocket
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   boost:
@@ -1324,8 +1341,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  ReactNativeFileAccess:
+    :path: "../node_modules/react-native-file-access"
   RNFlashList:
     :path: "../node_modules/@shopify/flash-list"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNSVG:
@@ -1395,11 +1418,15 @@ SPEC CHECKSUMS:
   React-runtimescheduler: aa382ce525689b88459e1181b3649220f175dc31
   React-utils: b22b4a51aa578b3aac1e7c19501c0b9ba358ed79
   ReactCommon: e708b8be8cb317b83e31c6ccfeda8bf6c0d1a2b3
+  ReactNativeFileAccess: ad2a22183f172817526bbff7c303e2418792f18c
   RNFlashList: 4b4b6b093afc0df60ae08f9cbf6ccd4c836c667a
+  RNGestureHandler: 25b969a1ffc806b9f9ad2e170d4a3b049c6af85e
+  RNReanimated: 5589be82dc26b3f94738eb7c6b1f942787532b25
   RNScreens: b582cb834dc4133307562e930e8fa914b8c04ef2
   RNSVG: ba3e7232f45e34b7b47e74472386cf4e1a676d0a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: ff0382b894475dba0b4d2a5fda860bfee5a9afad
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
 PODFILE CHECKSUM: 660f2e730f024fd58bcac8bcd1f7a26bf3182256
 
