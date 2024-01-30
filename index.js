@@ -3,6 +3,7 @@
  */
 
 import {AppRegistry, FlatList, ScrollView, Text, TextInput, TouchableOpacity} from 'react-native';
+import {FlashList} from '@shopify/flash-list';
 import App from './src/App';
 import {name as appName} from './app.json';
 
@@ -29,6 +30,11 @@ if (ScrollView.defaultProps == null) {
 
 if (FlatList.defaultProps == null) {
   FlatList.defaultProps = FlatList.defaultProps || {};
+  FlatList.defaultProps.showsVerticalScrollIndicator = false;
+}
+
+if (FlashList.defaultProps == null) {
+  FlashList.defaultProps = FlashList.defaultProps || {};
   FlatList.defaultProps.showsVerticalScrollIndicator = false;
 }
 
