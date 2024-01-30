@@ -18,7 +18,7 @@ const Stack = createNativeStackNavigator<RootStackParams>();
 function AppStacks() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <StatusBar animated={false} backgroundColor="#171717" barStyle="light-content" />
+      <StatusBar animated={false} backgroundColor="#1A2C44" barStyle="light-content" />
       <Stack.Navigator screenOptions={{headerShown: false, animation: 'none'}}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="TrendingScreen" component={TrendingScreen} />

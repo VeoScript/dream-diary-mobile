@@ -1,11 +1,11 @@
 import React, {Fragment} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-import tw from '../../styles/tailwind';
-import SvgIcon from './SvgIcon';
+import tw from '../../../styles/tailwind';
+import SvgIcon from '../SvgIcon';
 
 import {useRoute} from '@react-navigation/native';
-import {navigate} from '../../config/RootNavigation';
+import {navigate} from '../../../config/RootNavigation';
 
 export default function BottomBar(): JSX.Element {
   const {name} = useRoute();
@@ -13,7 +13,7 @@ export default function BottomBar(): JSX.Element {
   return (
     <View style={tw`absolute bottom-5 left-3 right-3 z-50 flex-row items-center justify-center`}>
       <View
-        style={tw`flex-row items-center justify-between px-2 py-1 gap-x-2 rounded-2xl bg-white bg-opacity-20`}>
+        style={tw`flex-row items-center justify-between px-2 py-1 gap-x-2 rounded-2xl bg-black bg-opacity-50`}>
         {navigations.map(
           (
             navigation: {icon: string; icon_outline: string; name: string; route: string},
@@ -22,7 +22,7 @@ export default function BottomBar(): JSX.Element {
             <Fragment key={i}>
               {name === navigation.route ? (
                 <TouchableOpacity
-                  style={tw`flex-row items-center px-3 py-2 gap-x-1 rounded-xl bg-white`}
+                  style={tw.style('flex-row items-center px-3 py-2 gap-x-1 rounded-xl bg-white')}
                   onPress={() => navigate(navigation.route)}>
                   <SvgIcon
                     iconName={navigation.icon}

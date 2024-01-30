@@ -3,8 +3,8 @@ import {SafeAreaView} from 'react-native';
 
 import tw from '../../styles/tailwind';
 
-import NavBar from '../ui/NavBar';
-import BottomBar from '../ui/BottomBar';
+import NavBar from '../ui/navigations/NavBar';
+import BottomBar from '../ui/navigations/BottomBar';
 
 import {useRoute} from '@react-navigation/native';
 

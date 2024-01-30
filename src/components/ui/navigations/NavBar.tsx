@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
-import tw from '../../styles/tailwind';
+import tw from '../../../styles/tailwind';
 
-import Logo from './Logo';
-import SvgIcon from './SvgIcon';
+import Logo from '../Logo';
+import SvgIcon from '../SvgIcon';
 
 export default function NavBar(): JSX.Element {
   return (
@@ -26,7 +26,7 @@ export default function NavBar(): JSX.Element {
           <Image
             style={tw`w-[3rem] h-[3rem] rounded-xl`}
             resizeMode="cover"
-            source={require('../../assets/images/veo.jpeg')}
+            source={require('../../../assets/images/veo.jpeg')}
           />
         </TouchableOpacity>
         <TouchableOpacity
