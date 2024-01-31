@@ -7,3 +7,9 @@ export interface ViewImageModalStoreProps {
   setIsVisible: (value: boolean) => void;
   setDefault: () => void;
 }
+
+export interface CommentModalStoreProps {
+  isVisible: boolean;
+  setIsVisible: (value: boolean) => void;
+  setDefault: () => void;
+}

@@ -23,3 +23,15 @@ export const viewImageModalStore = create<type.ViewImageModalStoreProps>(set => 
       isVisible: false,
     })),
 }));
+
+export const commentModalStore = create<type.CommentModalStoreProps>(set => ({
+  isVisible: false,
+  setIsVisible: (value: boolean) =>
+    set(() => ({
+      isVisible: value,
+    })),
+  setDefault: () =>
+    set(() => ({
+      isVisible: false,
+    })),
+}));

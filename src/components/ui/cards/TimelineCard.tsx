@@ -6,6 +6,7 @@ import moment from 'moment';
 import SvgIcon from '../SvgIcon';
 import SliderImage from '../SliderImage';
 import OptimizedImage from '../OptimizedImage';
+import {CommentButton, LikeButton, ShareButton} from '../buttons/Reactions';
 
 interface TimelineCardProps {
   data: {
@@ -51,6 +52,11 @@ function TimelineCard({data}: TimelineCardProps): JSX.Element {
         <View style={tw`relative flex-1 flex-col items-start w-full gap-y-5`}>
           <Text style={tw`font-poppins text-xs text-accent-1`}>{data.post.caption}</Text>
           <SliderImage images={data.post.images} />
+          <View style={tw`flex-row items-center justify-start w-full gap-x-3`}>
+            <LikeButton />
+            <CommentButton />
+            <ShareButton />
+          </View>
         </View>
       </View>
     </View>
