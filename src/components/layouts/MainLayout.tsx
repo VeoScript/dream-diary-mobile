@@ -5,9 +5,10 @@ import tw from '../../styles/tailwind';
 
 import NavBar from '../ui/navigations/NavBar';
 import BottomBar from '../ui/navigations/BottomBar';
+import ViewImageModal from '../ui/modals/ViewImageModal';
+import CommentModal from '../ui/modals/CommentModal';
 
 import {useRoute} from '@react-navigation/native';
-import ViewImageModal from '../ui/modals/ViewImageModal';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -22,6 +23,7 @@ function MainLayout({children}: MainLayoutProps): JSX.Element {
       {children}
       <BottomBar />
       <ViewImageModal />
+      <CommentModal />
     </SafeAreaView>
   );
 }
