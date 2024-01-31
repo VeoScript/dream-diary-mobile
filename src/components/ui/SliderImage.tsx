@@ -28,22 +28,20 @@ function SliderImage({images}: SliderImageProps): JSX.Element {
         scrollAnimationDuration={1000}
         onSnapToItem={index => setCurrentIndex(index)}
         renderItem={({index, item}) => (
-          <>
-            <TouchableOpacity
-              key={index}
-              onPress={() => {
-                setImageIndex(index);
-                setImages(images);
-                setIsVisible(true);
-              }}>
-              <OptimizedImage
-                url={item}
-                thumbnailSource={item}
-                resizeMode="cover"
-                style={tw`w-[100%] h-[100%] bg-accent-2`}
-              />
-            </TouchableOpacity>
-          </>
+          <TouchableOpacity
+            key={index}
+            onPress={() => {
+              setImageIndex(index);
+              setImages(images);
+              setIsVisible(true);
+            }}>
+            <OptimizedImage
+              url={item}
+              thumbnailSource={item}
+              resizeMode="cover"
+              style={tw`w-[100%] h-[100%] bg-accent-2`}
+            />
+          </TouchableOpacity>
         )}
       />
       <View style={tw`absolute bottom-2 flex-row items-center justify-center w-full`}>

@@ -1,5 +1,6 @@
 import React, {memo} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 import tw from '../../../styles/tailwind';
 import moment from 'moment';

@@ -1,5 +1,6 @@
 import React from 'react';
-import {FlatList} from 'react-native';
+import {FlatList} from 'react-native-gesture-handler';
+import {ScrollView} from 'react-native-gesture-handler';
 
 import tw from '../styles/tailwind';
 
@@ -14,6 +15,7 @@ export default function HomeScreen(): JSX.Element {
       <FlatList
         contentContainerStyle={tw`p-3 pb-[5rem]`}
         data={timeline_data}
+        renderScrollComponent={props => <ScrollView {...props} />}
         renderItem={({item}): JSX.Element => {
           return <TimelineCard data={item} />;
         }}
