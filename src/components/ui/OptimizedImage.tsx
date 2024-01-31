@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {CachedImage} from '@georstat/react-native-image-cache';
 
 interface OptimizedImageProps {
@@ -9,7 +9,7 @@ interface OptimizedImageProps {
   imageStyle?: any;
 }
 
-export default function OptimizedImage({
+function OptimizedImage({
   url,
   thumbnailSource,
   resizeMode,
@@ -26,3 +26,5 @@ export default function OptimizedImage({
     />
   );
 }
+
+export default memo(OptimizedImage);

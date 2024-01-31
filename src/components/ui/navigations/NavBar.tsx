@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 import tw from '../../../styles/tailwind';
@@ -6,7 +6,7 @@ import tw from '../../../styles/tailwind';
 import Logo from '../Logo';
 import SvgIcon from '../SvgIcon';
 
-export default function NavBar(): JSX.Element {
+function NavBar(): JSX.Element {
   return (
     <View
       style={tw`flex-row items-center justify-between w-full px-3 py-5 gap-x-3 border-b border-accent-4 border-opacity-30`}>
@@ -39,3 +39,5 @@ export default function NavBar(): JSX.Element {
     </View>
   );
 }
+
+export default memo(NavBar);

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 
 import tw from '../../styles/tailwind';
 
-export default function Logo(): JSX.Element {
+function Logo(): JSX.Element {
   return (
     <View style={tw`flex-row items-center`}>
       <Text style={tw`font-poppins-bold text-xl tracking-tight text-accent-6`}>Dream</Text>
@@ -11,3 +11,5 @@ export default function Logo(): JSX.Element {
     </View>
   );
 }
+
+export default memo(Logo);

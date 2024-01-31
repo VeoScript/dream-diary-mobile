@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 
 import tw from '../../styles/tailwind';
 
-export default function NoInternetConnection(): JSX.Element {
+function NoInternetConnection(): JSX.Element {
   return (
     <View style={tw`absolute top-1/2 left-3 right-3 z-50 flex-row items-center justify-center`}>
       <View style={tw`p-4 rounded-xl bg-black bg-opacity-70`}>
@@ -14,3 +14,5 @@ export default function NoInternetConnection(): JSX.Element {
     </View>
   );
 }
+
+export default memo(NoInternetConnection);

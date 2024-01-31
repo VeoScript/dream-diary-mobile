@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import tw from '../../../styles/tailwind';
@@ -20,7 +20,7 @@ interface TimelineCardProps {
   };
 }
 
-export default function TimelineCard({data}: TimelineCardProps): JSX.Element {
+function TimelineCard({data}: TimelineCardProps): JSX.Element {
   return (
     <View style={tw`flex-row items-start w-full mb-5 gap-x-3`}>
       <TouchableOpacity style={tw`w-12`}>
@@ -56,3 +56,5 @@ export default function TimelineCard({data}: TimelineCardProps): JSX.Element {
     </View>
   );
 }
+
+export default memo(TimelineCard);
