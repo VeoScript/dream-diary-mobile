@@ -5,11 +5,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {navigationRef} from './RootNavigation';
 
-import {HomeScreen, TrendingScreen, MessageScreen} from '../shared/screens';
+import {HomeScreen, DreamScreen, MessageScreen} from '../shared/screens';
 
 type RootStackParams = {
   HomeScreen: undefined;
-  TrendingScreen: undefined;
+  DreamScreen: undefined;
   MessageScreen: undefined;
 };
 
@@ -21,7 +21,7 @@ function AppStacks() {
       <StatusBar animated={false} backgroundColor="#1A2C44" barStyle="light-content" />
       <Stack.Navigator screenOptions={{headerShown: false, animation: 'none'}}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="TrendingScreen" component={TrendingScreen} />
+        <Stack.Screen name="DreamScreen" component={DreamScreen} />
         <Stack.Screen name="MessageScreen" component={MessageScreen} />
       </Stack.Navigator>
     </NavigationContainer>

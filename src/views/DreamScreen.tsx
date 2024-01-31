@@ -5,11 +5,11 @@ import tw from '../styles/tailwind';
 
 import MainLayout from '../components/layouts/MainLayout';
 
-export default function TrendingScreen(): JSX.Element {
+export default function DreamScreen(): JSX.Element {
   return (
     <MainLayout>
       <View style={tw`flex-1 flex-col items-center justify-center`}>
-        <Text style={tw`font-poppins text-white`}>Timeline Screen</Text>
+        <Text style={tw`font-poppins text-white`}>Dreams Screen</Text>
       </View>
     </MainLayout>
   );

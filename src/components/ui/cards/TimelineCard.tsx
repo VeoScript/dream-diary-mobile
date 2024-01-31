@@ -1,6 +1,5 @@
 import React, {memo} from 'react';
-import {View, Text} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, TouchableOpacity} from 'react-native';
 
 import tw from '../../../styles/tailwind';
 import moment from 'moment';
@@ -23,7 +22,7 @@ interface TimelineCardProps {
 
 function TimelineCard({data}: TimelineCardProps): JSX.Element {
   return (
-    <View style={tw`flex-row items-start w-full mb-5 gap-x-3`}>
+    <View style={tw`flex-1 flex-row items-start w-full mb-5 gap-x-3`}>
       <TouchableOpacity style={tw`w-12`}>
         <OptimizedImage
           url={data.image}
@@ -49,7 +48,7 @@ function TimelineCard({data}: TimelineCardProps): JSX.Element {
             <SvgIcon iconName="horizontal-dots" strokeColor="#fff" width={20} height={20} />
           </TouchableOpacity>
         </View>
-        <View style={tw`relative flex-col items-start w-full gap-y-5`}>
+        <View style={tw`relative flex-1 flex-col items-start w-full gap-y-5`}>
           <Text style={tw`font-poppins text-xs text-accent-1`}>{data.post.caption}</Text>
           <SliderImage images={data.post.images} />
         </View>

@@ -1,5 +1,5 @@
 import HomeScreen from '../views/HomeScreen';
-import TrendingScreen from '../views/TrendingScreen';
+import DreamScreen from '../views/DreamScreen';
 import MessageScreen from '../views/MessageScreen';
 
-export {HomeScreen, TrendingScreen, MessageScreen};
+export {HomeScreen, DreamScreen, MessageScreen};
