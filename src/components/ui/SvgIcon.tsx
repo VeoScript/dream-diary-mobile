@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Path, Svg} from 'react-native-svg';
 
 interface SvgIconProps {
@@ -23,7 +23,7 @@ interface SvgIconProps {
 //   viewBoxWidth={20}
 // />
 
-export default function SvgIcon({
+function SvgIcon({
   width = 24,
   height = 24,
   iconName,
@@ -118,7 +118,19 @@ const iconMapper = (iconName: string) => {
           d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
         />
       );
+    case 'arrow-down-double':
+      return (
+        <Path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+        />
+      );
+    case 'x-mark':
+      return <Path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />;
     default:
       <></>;
   }
 };
+
+export default memo(SvgIcon);

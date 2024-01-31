@@ -1,16 +1,20 @@
-import React, {useState} from 'react';
-import {View, Dimensions, TouchableOpacity} from 'react-native';
+import React, {memo, useState} from 'react';
+import {View, Dimensions} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 import tw from '../../styles/tailwind';
-
 import Carousel from 'react-native-reanimated-carousel';
 import OptimizedImage from './OptimizedImage';
+
+import {viewImageModalStore} from '../../helpers/store/modal';
 
 interface SliderImageProps {
   images: any[];
 }
 
-export default function SliderImage({images}: SliderImageProps): JSX.Element {
+function SliderImage({images}: SliderImageProps): JSX.Element {
+  const {setIsVisible, setImageIndex, setImages} = viewImageModalStore();
+
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const width = Dimensions.get('window').width;
@@ -22,13 +26,16 @@ export default function SliderImage({images}: SliderImageProps): JSX.Element {
         height={width / 1.5}
         data={images}
         scrollAnimationDuration={1000}
-        onSnapToItem={index => {
-          console.log('current index:', index);
-          setCurrentIndex(index);
-        }}
+        onSnapToItem={index => setCurrentIndex(index)}
         renderItem={({index, item}) => (
           <>
-            <TouchableOpacity key={index}>
+            <TouchableOpacity
+              key={index}
+              onPress={() => {
+                setImageIndex(index);
+                setImages(images);
+                setIsVisible(true);
+              }}>
               <OptimizedImage
                 url={item}
                 thumbnailSource={item}
@@ -57,3 +64,5 @@ export default function SliderImage({images}: SliderImageProps): JSX.Element {
     </View>
   );
 }
+
+export default memo(SliderImage);

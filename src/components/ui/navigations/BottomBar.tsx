@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, memo} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import tw from '../../../styles/tailwind';
@@ -7,7 +7,7 @@ import SvgIcon from '../SvgIcon';
 import {useRoute} from '@react-navigation/native';
 import {navigate} from '../../../config/RootNavigation';
 
-export default function BottomBar(): JSX.Element {
+function BottomBar(): JSX.Element {
   const {name} = useRoute();
 
   return (
@@ -73,3 +73,5 @@ const navigations = [
     route: 'MessageScreen',
   },
 ];
+
+export default memo(BottomBar);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {SafeAreaView} from 'react-native';
 
 import tw from '../../styles/tailwind';
@@ -7,12 +7,13 @@ import NavBar from '../ui/navigations/NavBar';
 import BottomBar from '../ui/navigations/BottomBar';
 
 import {useRoute} from '@react-navigation/native';
+import ViewImageModal from '../ui/modals/ViewImageModal';
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-export default function MainLayout({children}: MainLayoutProps): JSX.Element {
+function MainLayout({children}: MainLayoutProps): JSX.Element {
   const {name} = useRoute();
 
   return (
@@ -20,6 +21,9 @@ export default function MainLayout({children}: MainLayoutProps): JSX.Element {
       {name === 'HomeScreen' && <NavBar />}
       {children}
       <BottomBar />
+      <ViewImageModal />
     </SafeAreaView>
   );
 }
+
+export default memo(MainLayout);
