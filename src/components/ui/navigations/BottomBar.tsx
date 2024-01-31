@@ -63,8 +63,8 @@ const navigations = [
   {
     icon: 'discover',
     icon_outline: 'discover-outline',
-    name: 'Trending',
-    route: 'TrendingScreen',
+    name: 'Dreams',
+    route: 'DreamScreen',
   },
   {
     icon: 'message',

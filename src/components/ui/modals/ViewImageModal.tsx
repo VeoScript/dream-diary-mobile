@@ -40,7 +40,6 @@ function ViewImageModal(): JSX.Element {
       onBackdropPress={onClose}
       onBackButtonPress={onClose}
       onSwipeMove={onClose}
-      swipeDirection="down"
       style={tw`m-0`}>
       <ImageViewer
         saveToLocalByLongPress={false}
