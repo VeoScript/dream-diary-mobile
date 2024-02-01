@@ -152,6 +152,14 @@ const iconMapper = (iconName: string) => {
           d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
         />
       );
+    case 'plus':
+      return (
+        <Path
+          clipRule="evenodd"
+          fillRule="evenodd"
+          d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+        />
+      );
     default:
       <></>;
   }
