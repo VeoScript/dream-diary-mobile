@@ -36,7 +36,9 @@ function TimelineCard({data}: TimelineCardProps): JSX.Element {
         <View style={tw`flex-row items-start justify-between w-full`}>
           <View style={tw`flex-col gap-y-1`}>
             <View style={tw`flex-row items-center gap-x-1.5`}>
-              <Text style={tw`font-poppins text-xs text-accent-1`}>{data.name}</Text>
+              <TouchableOpacity>
+                <Text style={tw`font-poppins text-xs text-accent-1`}>{data.name}</Text>
+              </TouchableOpacity>
               <View style={tw`p-0.5 rounded-full bg-neutral-400`} />
               <Text style={tw`font-poppins text-[9px] text-neutral-400`}>
                 {moment(data.created_at).fromNow()}
