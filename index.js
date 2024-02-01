@@ -29,6 +29,7 @@ if (TextInput.defaultProps == null) {
   TextInput.defaultProps = {};
   TextInput.defaultProps.allowFontScaling = false;
   TextInput.defaultProps.autoComplete = 'off';
+  TextInput.defaultProps.autoCapitalize = 'none';
 }
 
 if (TouchableOpacity.defaultProps == null) {
