@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   theme: {
     extend: {
@@ -19,4 +21,12 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    plugin(({addUtilities}) => {
+      addUtilities({
+        '.text-box':
+          'android:p-2 ios:p-3 font-poppins android:text-xs ios:text-sm text-white rounded-xl border border-accent-2',
+      });
+    }),
+  ],
 };
