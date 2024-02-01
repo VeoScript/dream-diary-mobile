@@ -9,7 +9,7 @@ import SvgIcon from '../SvgIcon';
 function NavBar(): JSX.Element {
   return (
     <View
-      style={tw`flex-row items-center justify-between w-full px-3 py-5 gap-x-3 border-b border-accent-4 border-opacity-30`}>
+      style={tw`flex-row items-center justify-between w-full px-3 py-5 gap-x-3 border-b border-accent-2 border-opacity-30`}>
       <View style={tw`flex-col items-start gap-y-5`}>
         <Logo />
         <View style={tw`flex-row items-center gap-x-3`}>
@@ -32,7 +32,7 @@ function NavBar(): JSX.Element {
         <TouchableOpacity
           style={tw`absolute -left-6 -bottom-2 flex-row items-center justify-center p-1 rounded-md bg-accent-1 bg-opacity-50`}>
           <View style={tw`px-1.5 py-1 rounded-md bg-accent-1`}>
-            <SvgIcon iconName="bell" strokeColor="#333" fill="#333" width={15} height={15} />
+            <SvgIcon iconName="plus" strokeColor="#333" width={15} height={15} />
           </View>
         </TouchableOpacity>
       </View>

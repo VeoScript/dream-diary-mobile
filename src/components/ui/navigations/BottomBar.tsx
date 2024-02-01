@@ -11,9 +11,10 @@ function BottomBar(): JSX.Element {
   const {name} = useRoute();
 
   return (
-    <View style={tw`absolute bottom-5 left-3 right-3 z-50 flex-row items-center justify-center`}>
+    <View
+      style={tw`absolute android:bottom-5 ios:bottom-12 left-3 right-3 z-50 flex-row items-center justify-center`}>
       <View
-        style={tw`flex-row items-center justify-between px-2 py-1 gap-x-2 rounded-2xl bg-black bg-opacity-50`}>
+        style={tw`flex-row items-center justify-between px-2 py-1 gap-x-2 rounded-2xl bg-neutral-500 bg-opacity-50`}>
         {navigations.map(
           (
             navigation: {icon: string; icon_outline: string; name: string; route: string},
