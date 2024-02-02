@@ -26,7 +26,6 @@ function CommentModal() {
       onBackButtonPress={onClose}
       onSwipeComplete={onClose}
       swipeDirection="down"
-      backdropOpacity={0}
       style={tw`m-0`}>
       <View
         style={tw`absolute bottom-0 flex-col items-start w-full h-[30rem] ios:pb-5 gap-y-1 rounded-t-3xl border-2 border-accent-2 border-opacity-30 bg-accent-3`}>
