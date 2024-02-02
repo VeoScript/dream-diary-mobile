@@ -2,8 +2,8 @@ import React, {memo, useCallback} from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 
 import tw from '../../../styles/tailwind';
-import SvgIcon from '../SvgIcon';
 import Modal from 'react-native-modal';
+import {CameraPostUpload, PhotoPostUpload} from '../uploads/PostUpload';
 
 import {newPostModalStore} from '../../../helpers/store/modal';
 
@@ -44,12 +44,8 @@ function NewPostModal() {
               placeholderTextColor="#BCF1F0"
             />
             <View style={tw`flex-row items-center p-3 gap-x-3`}>
-              <TouchableOpacity>
-                <SvgIcon iconName="camera" strokeColor="#fff" width={20} height={20} />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <SvgIcon iconName="image" strokeColor="#fff" width={20} height={20} />
-              </TouchableOpacity>
+              <CameraPostUpload />
+              <PhotoPostUpload />
             </View>
           </View>
           <TouchableOpacity style={tw`default-button`}>

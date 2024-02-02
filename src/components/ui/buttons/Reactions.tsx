@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 
 import tw from '../../../styles/tailwind';
@@ -13,7 +13,7 @@ interface CommentButtonProps {
   comment_count: number;
 }
 
-export function LikeButton({like_count = 0}: LikeButtonProps): JSX.Element {
+const LikeButton = memo(function LikeButton({like_count = 0}: LikeButtonProps): JSX.Element {
   return (
     <View style={tw`flex-row items-center gap-x-2`}>
       <TouchableOpacity style={tw`p-1 rounded-full bg-red-400 bg-opacity-50`}>
@@ -24,9 +24,11 @@ export function LikeButton({like_count = 0}: LikeButtonProps): JSX.Element {
       )}
     </View>
   );
-}
+});
 
-export function CommentButton({comment_count = 0}: CommentButtonProps): JSX.Element {
+const CommentButton = memo(function CommentButton({
+  comment_count = 0,
+}: CommentButtonProps): JSX.Element {
   const {setIsVisible} = commentModalStore();
 
   return (
@@ -41,12 +43,14 @@ export function CommentButton({comment_count = 0}: CommentButtonProps): JSX.Elem
       )}
     </View>
   );
-}
+});
 
-export function ShareButton(): JSX.Element {
+const ShareButton = memo(function ShareButton(): JSX.Element {
   return (
     <TouchableOpacity style={tw`p-1 rounded-full bg-white bg-opacity-20`}>
       <SvgIcon iconName="share" strokeColor="#fff" width={15} height={15} />
     </TouchableOpacity>
   );
-}
+});
+
+export {LikeButton, CommentButton, ShareButton};
