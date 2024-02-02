@@ -5,9 +5,9 @@ import tw from '../../../styles/tailwind';
 import SvgIcon from '../SvgIcon';
 import Modal from 'react-native-modal';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import OptimizedImage from '../OptimizedImage';
 
 import {viewImageModalStore} from '../../../helpers/store/modal';
-import OptimizedImage from '../OptimizedImage';
 
 function ViewImageModal(): JSX.Element {
   const {imageIndex, images, isVisible, setDefault} = viewImageModalStore();
@@ -25,7 +25,7 @@ function ViewImageModal(): JSX.Element {
 
   const viewImageHeader = (): JSX.Element => (
     <View
-      style={tw.style('absolute z-10 right-3', Platform.OS === 'ios' ? 'top-[50px]' : 'top-20')}>
+      style={tw.style('absolute z-10 right-3', Platform.OS === 'ios' ? 'top-[70px]' : 'top-20')}>
       <TouchableOpacity onPress={onClose}>
         <SvgIcon iconName="x-mark" strokeColor="#fff" width={20} height={20} />
       </TouchableOpacity>
@@ -68,7 +68,7 @@ const indicator = (
     <View
       style={tw.style(
         'absolute justify-center self-center',
-        Platform.OS === 'ios' ? 'top-[50px]' : 'top-20',
+        Platform.OS === 'ios' ? 'top-[70px]' : 'top-20',
       )}>
       <Text style={tw`text-white`}>{`${currentShowIndex} / ${total}`}</Text>
     </View>
