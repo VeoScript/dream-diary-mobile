@@ -24,8 +24,9 @@ module.exports = {
   plugins: [
     plugin(({addUtilities}) => {
       addUtilities({
-        '.text-box':
+        '.default-text-input':
           'android:p-2 ios:p-3 font-poppins android:text-xs ios:text-sm text-white rounded-xl border border-accent-2',
+        '.default-button': 'flex-row items-center justify-center w-full p-3 rounded-xl bg-accent-2',
       });
     }),
   ],

@@ -55,8 +55,8 @@ function TimelineCard({data}: TimelineCardProps): JSX.Element {
           <Text style={tw`font-poppins text-xs text-accent-1`}>{data.post.caption}</Text>
           <SliderImage images={data.post.images} />
           <View style={tw`flex-row items-center justify-start w-full gap-x-3`}>
-            <LikeButton />
-            <CommentButton />
+            <LikeButton like_count={5} />
+            <CommentButton comment_count={3} />
             <ShareButton />
           </View>
         </View>

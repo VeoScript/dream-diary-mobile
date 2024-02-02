@@ -5,6 +5,7 @@ import tw from '../../styles/tailwind';
 
 import NavBar from '../ui/navigations/NavBar';
 import BottomBar from '../ui/navigations/BottomBar';
+import NewPostModal from '../ui/modals/NewPostModal';
 import ViewImageModal from '../ui/modals/ViewImageModal';
 import CommentModal from '../ui/modals/CommentModal';
 
@@ -22,6 +23,7 @@ function MainLayout({children}: MainLayoutProps): JSX.Element {
       {name === 'HomeScreen' && <NavBar />}
       {children}
       <BottomBar />
+      <NewPostModal />
       <ViewImageModal />
       <CommentModal />
     </SafeAreaView>

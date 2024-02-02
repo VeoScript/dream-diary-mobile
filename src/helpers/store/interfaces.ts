@@ -13,3 +13,9 @@ export interface CommentModalStoreProps {
   setIsVisible: (value: boolean) => void;
   setDefault: () => void;
 }
+
+export interface NewPostModalStoreProps {
+  isVisible: boolean;
+  setIsVisible: (value: boolean) => void;
+  setDefault: () => void;
+}
