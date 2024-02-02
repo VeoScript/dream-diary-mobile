@@ -6,7 +6,11 @@ import tw from '../../../styles/tailwind';
 import Logo from '../Logo';
 import SvgIcon from '../SvgIcon';
 
+import {newPostModalStore} from '../../../helpers/store/modal';
+
 function NavBar(): JSX.Element {
+  const {setIsVisible} = newPostModalStore();
+
   return (
     <View
       style={tw`flex-row items-center justify-between w-full px-3 py-5 gap-x-3 border-b border-accent-2 border-opacity-30`}>
@@ -30,7 +34,8 @@ function NavBar(): JSX.Element {
           />
         </TouchableOpacity>
         <TouchableOpacity
-          style={tw`absolute -left-6 -bottom-2 flex-row items-center justify-center p-1 rounded-md bg-accent-1 bg-opacity-50`}>
+          style={tw`absolute -left-6 -bottom-2 flex-row items-center justify-center p-1 rounded-md bg-accent-1 bg-opacity-50`}
+          onPress={() => setIsVisible(true)}>
           <View style={tw`px-1.5 py-1 rounded-md bg-accent-1`}>
             <SvgIcon iconName="plus" strokeColor="#333" width={15} height={15} />
           </View>

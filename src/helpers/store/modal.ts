@@ -35,3 +35,15 @@ export const commentModalStore = create<type.CommentModalStoreProps>(set => ({
       isVisible: false,
     })),
 }));
+
+export const newPostModalStore = create<type.NewPostModalStoreProps>(set => ({
+  isVisible: false,
+  setIsVisible: (value: boolean) =>
+    set(() => ({
+      isVisible: value,
+    })),
+  setDefault: () =>
+    set(() => ({
+      isVisible: false,
+    })),
+}));
