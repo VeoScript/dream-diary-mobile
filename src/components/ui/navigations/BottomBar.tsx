@@ -68,10 +68,10 @@ const navigations = [
     route: 'DreamScreen',
   },
   {
-    icon: 'message',
-    icon_outline: 'message-outline',
-    name: 'Message',
-    route: 'MessageScreen',
+    icon: 'settings',
+    icon_outline: 'settings-outline',
+    name: 'Settings',
+    route: 'SettingsScreen',
   },
 ];
 

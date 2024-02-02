@@ -1,5 +1,5 @@
 import HomeScreen from '../views/HomeScreen';
 import DreamScreen from '../views/DreamScreen';
-import MessageScreen from '../views/MessageScreen';
+import SettingsScreen from '../views/SettingsScreen';
 
-export {HomeScreen, DreamScreen, MessageScreen};
+export {HomeScreen, DreamScreen, SettingsScreen};
