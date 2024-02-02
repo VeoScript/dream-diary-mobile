@@ -22,6 +22,7 @@
     "react-native-config": "^1.5.1",
     "react-native-file-access": "^3.0.5",
     "react-native-gesture-handler": "^2.14.1",
+    "react-native-image-picker": "^7.1.0",
     "react-native-image-slider-banner": "^1.0.3",
     "react-native-image-zoom-viewer": "^3.0.1",
     "react-native-modal": "^13.0.1",
