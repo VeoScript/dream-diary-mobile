@@ -19,3 +19,10 @@ export interface NewPostModalStoreProps {
   setIsVisible: (value: boolean) => void;
   setDefault: () => void;
 }
+
+export interface UploadPostStoreProps {
+  images: any[];
+  setImages: (value: any[]) => void;
+  setRemoveImage: (value: number) => void;
+  setDefault: () => void;
+}

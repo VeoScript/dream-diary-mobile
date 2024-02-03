@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {FlatList} from 'react-native';
 
 import tw from '../styles/tailwind';
@@ -14,10 +14,12 @@ export default function HomeScreen(): JSX.Element {
       <FlatList
         contentContainerStyle={tw`p-3 pb-[5rem]`}
         data={timeline_data}
-        renderItem={({item}): JSX.Element => {
-          return <TimelineCard data={item} />;
-        }}
+        renderItem={({item}): JSX.Element => <RenderTimelineCard item={item} />}
       />
     </MainLayout>
   );
 }
+
+const RenderTimelineCard = memo(({item}: any) => {
+  return <TimelineCard data={item} />;
+});
