@@ -33,7 +33,7 @@ function NewDreamModal() {
       style={tw`m-0`}>
       <Toast config={toastConfig} topOffset={Platform.OS === 'ios' ? 70 : 50} />
       <View
-        style={tw`absolute bottom-0 flex-col items-start w-full h-[40rem] ios:pb-5 gap-y-1 rounded-t-3xl border-2 border-accent-2 border-opacity-30 bg-accent-3`}>
+        style={tw`absolute bottom-0 flex-col items-start w-full h-1/2 ios:pb-5 gap-y-1 rounded-t-3xl border-2 border-accent-2 border-opacity-30 bg-accent-3`}>
         <View style={tw`flex-col items-center w-full`}>
           <View style={tw`w-[5rem] h-2 mt-2 rounded-full bg-neutral-400`} />
         </View>
