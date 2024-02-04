@@ -6,6 +6,7 @@ import tw from '../../styles/tailwind';
 import NavBar from '../ui/navigations/NavBar';
 import BottomBar from '../ui/navigations/BottomBar';
 import NewPostModal from '../ui/modals/NewPostModal';
+import NewDreamModal from '../ui/modals/NewDreamModal';
 import ViewImageModal from '../ui/modals/ViewImageModal';
 import CommentModal from '../ui/modals/CommentModal';
 
@@ -20,10 +21,11 @@ function MainLayout({children}: MainLayoutProps): JSX.Element {
 
   return (
     <SafeAreaView style={tw`relative flex-1 bg-accent-3`}>
-      {name === 'HomeScreen' && <NavBar />}
+      {(name === 'HomeScreen' || name === 'DreamScreen') && <NavBar />}
       {children}
       <BottomBar />
       <NewPostModal />
+      <NewDreamModal />
       <ViewImageModal />
       <CommentModal />
     </SafeAreaView>
