@@ -49,7 +49,7 @@ export const newPostModalStore = create<type.NewPostModalStoreProps>(set => ({
 }));
 
 export const newDreamModalStore = create<type.NewDreamModalStoreProps>(set => ({
-  isVisible: false,
+  isVisible: true,
   setIsVisible: (value: boolean) =>
     set(() => ({
       isVisible: value,

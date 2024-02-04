@@ -14,7 +14,7 @@ function NavBar(): JSX.Element {
   const {name} = useRoute();
 
   const {setIsVisible: setIsVisibleNewPost} = newPostModalStore();
-  const {setIsVisible: setIsVisibleNewDream} = newDreamModalStore();
+  const {isVisible: isVisibleNewDream, setIsVisible: setIsVisibleNewDream} = newDreamModalStore();
 
   return (
     <View
@@ -59,7 +59,7 @@ function NavBar(): JSX.Element {
                 setIsVisibleNewPost(true);
                 break;
               case 'DreamScreen':
-                setIsVisibleNewDream(true);
+                setIsVisibleNewDream(!isVisibleNewDream);
                 break;
               default:
                 break;
