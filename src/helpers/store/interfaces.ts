@@ -20,6 +20,12 @@ export interface NewPostModalStoreProps {
   setDefault: () => void;
 }
 
+export interface NewDreamModalStoreProps {
+  isVisible: boolean;
+  setIsVisible: (value: boolean) => void;
+  setDefault: () => void;
+}
+
 export interface UploadPostStoreProps {
   images: any[];
   setImages: (value: any[]) => void;
