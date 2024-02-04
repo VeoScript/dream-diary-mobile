@@ -1,16 +1,24 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {memo} from 'react';
+import {FlatList} from 'react-native';
 
 import tw from '../styles/tailwind';
-
 import MainLayout from '../components/layouts/MainLayout';
+
+import {dreams} from '../shared/mocks/dreams';
+import DreamCard from '../components/ui/cards/DreamCard';
 
 export default function DreamScreen(): JSX.Element {
   return (
     <MainLayout>
-      <View style={tw`flex-1 flex-col items-center justify-center`}>
-        <Text style={tw`font-poppins text-white`}>Dreams Screen</Text>
-      </View>
+      <FlatList
+        contentContainerStyle={tw`pb-[5rem]`}
+        data={dreams}
+        renderItem={({item}): JSX.Element => <RenderDreamCard item={item} />}
+      />
     </MainLayout>
   );
 }
+
+const RenderDreamCard = memo(({item}: any) => {
+  return <DreamCard dream={item} />;
+});
