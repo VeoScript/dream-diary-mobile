@@ -1,4 +1,5 @@
 import React, {memo} from 'react';
+import {StyleProp, ViewStyle} from 'react-native';
 import {Path, Svg} from 'react-native-svg';
 
 interface SvgIconProps {
@@ -10,7 +11,7 @@ interface SvgIconProps {
   viewBoxWidth?: number;
   viewBoxHeight?: number;
   fill?: string;
-  customStyle?: any;
+  customStyle?: StyleProp<ViewStyle>;
 }
 
 // Usage...

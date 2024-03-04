@@ -2,13 +2,14 @@
 import React, {memo} from 'react';
 import {View} from 'react-native';
 import {ImageSlider} from 'react-native-image-slider-banner';
+import {DataType} from 'react-native-image-slider-banner/src';
 
 import tw from '../../styles/tailwind';
 
 import {viewImageModalStore} from '../../helpers/store/modal';
 
 interface SliderImageProps {
-  images: any;
+  images: string[];
 }
 
 function SliderImage({images}: SliderImageProps): JSX.Element {
@@ -21,7 +22,7 @@ function SliderImage({images}: SliderImageProps): JSX.Element {
   return (
     <View style={tw`flex-1 rounded-xl overflow-hidden`}>
       <ImageSlider
-        data={transformedImages}
+        data={transformedImages as DataType[]}
         autoPlay={false}
         preview={false}
         caroselImageStyle={{resizeMode: 'cover'}}

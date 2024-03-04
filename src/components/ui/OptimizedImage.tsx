@@ -1,12 +1,13 @@
 import React, {memo} from 'react';
+import {StyleProp, ImageStyle} from 'react-native';
 import {CachedImage} from '@georstat/react-native-image-cache';
 
 interface OptimizedImageProps {
   url: string;
   thumbnailSource: string;
   resizeMode: 'center' | 'contain' | 'cover' | 'repeat' | 'stretch';
-  style: any;
-  imageStyle?: any;
+  style: StyleProp<ImageStyle>;
+  imageStyle?: StyleProp<ImageStyle>;
 }
 
 function OptimizedImage({
