@@ -3,7 +3,7 @@ export interface ViewImageModalStoreProps {
   images: any[];
   isVisible: boolean;
   setImageIndex: (value: number) => void;
-  setImages: (value: any[]) => void;
+  setImages: (value: string[]) => void;
   setIsVisible: (value: boolean) => void;
   setDefault: () => void;
 }
@@ -28,7 +28,7 @@ export interface NewDreamModalStoreProps {
 
 export interface UploadPostStoreProps {
   images: any[];
-  setImages: (value: any[]) => void;
+  setImages: (value: string[]) => void;
   setRemoveImage: (value: number) => void;
   setDefault: () => void;
 }

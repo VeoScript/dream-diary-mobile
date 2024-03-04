@@ -9,7 +9,7 @@ export const viewImageModalStore = create<type.ViewImageModalStoreProps>(set => 
     set(() => ({
       imageIndex: value,
     })),
-  setImages: (value: any[]) =>
+  setImages: (value: string[]) =>
     set(() => ({
       images: value,
     })),

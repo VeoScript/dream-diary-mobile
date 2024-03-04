@@ -8,17 +8,10 @@ import SliderImage from '../SliderImage';
 import OptimizedImage from '../OptimizedImage';
 import {CommentButton, LikeButton, ShareButton} from '../buttons/Reactions';
 
+import {PostImagesProps} from '../../../shared/types/images';
+
 interface TimelineCardProps {
-  data: {
-    image: string;
-    name: string;
-    username: string;
-    post: {
-      images: any[];
-      caption: string;
-    };
-    created_at: Date;
-  };
+  data: PostImagesProps;
 }
 
 function TimelineCard({data}: TimelineCardProps): JSX.Element {

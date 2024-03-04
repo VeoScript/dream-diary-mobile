@@ -3,7 +3,7 @@ import * as type from './interfaces';
 
 export const uploadPostStore = create<type.UploadPostStoreProps>(set => ({
   images: [],
-  setImages: (value: any[]) =>
+  setImages: (value: string[]) =>
     set(state => ({
       images: [...state.images, ...value],
     })),
